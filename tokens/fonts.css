@@ -1,0 +1,11 @@
+/* ============================================================
+   FONTS — Graphic Journalism edition
+   ------------------------------------------------------------
+   Four roles:
+   - Lora         → editorial SERIF for captions, data stories, body
+   - Caveat        → HAND-LETTERED annotations & labels (signature)
+   - Space Grotesk → clean SANS for UI chrome
+   - Space Mono    → MONO for raw numbers, axis labels, code
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Caveat:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');

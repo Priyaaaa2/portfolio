@@ -1,0 +1,65 @@
+/* ============================================================
+   BASE — defaults for the graphic journalism system
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--text-body);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* headings — editorial serif by default */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  color: var(--text-strong);
+  margin: 0;
+  text-wrap: balance;
+}
+
+p  { margin: 0; text-wrap: pretty; }
+a  { color: inherit; }
+code, kbd, samp { font-family: var(--font-mono); }
+
+/* hand-lettered annotation */
+.ds-annotation {
+  font-family: var(--font-hand);
+  font-weight: var(--weight-bold);
+  font-size: var(--annotation-size);
+  line-height: var(--annotation-line);
+  color: var(--ink-900);
+}
+
+/* editorial italic caption */
+.ds-caption {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+
+/* mono micro-label / axis */
+.ds-eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* amber wash surface */
+.ds-amber { background: var(--amber-200); }
+.ds-slate  { background: var(--slate-200); }
+
+::selection { background: var(--amber-400); color: var(--ink-900); }

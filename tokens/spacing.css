@@ -1,0 +1,78 @@
+/* ============================================================
+   SPACING · RADII · BORDERS · SHADOWS — Ink-and-Wash edition
+   ============================================================
+   Key physics shift from hard-shadow to sketch-line:
+   - Borders are thin ink strokes (1–1.5 px), not chunky 2-3 px
+   - No hard offset box-shadows — elevation via subtle soft shadow
+   - Corner radii are smaller and more natural (felt pen feel)
+   - Textures remain but are warmer
+   ============================================================ */
+
+:root {
+  /* spacing — 4px base */
+  --space-0:  0;
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.5rem;
+  --space-6:  2rem;
+  --space-7:  2.5rem;
+  --space-8:  3rem;
+  --space-10: 4rem;
+  --space-12: 6rem;
+
+  /* radii — gentle, not aggressive */
+  --radius-xs:   4px;
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   14px;
+  --radius-xl:   20px;
+  --radius-pill: 999px;
+
+  /* borders — thin ink strokes */
+  --border-width:       1.5px;
+  --border-width-thick: 2px;
+  --border-width-hair:  1px;
+  --stroke:       var(--border-width) solid var(--ink-900);
+  --stroke-thick: var(--border-width-thick) solid var(--ink-900);
+  --stroke-hair:  var(--border-width-hair) solid var(--ink-200);
+  --stroke-soft:  var(--border-width-hair) solid var(--ink-300);
+  --stroke-dashed:var(--border-width) dashed var(--ink-600);
+  --stroke-amber: var(--border-width) solid var(--amber-500);
+
+  /* shadows — soft, warm, no hard offset */
+  --shadow-soft-xs: 0 1px 3px rgba(28,25,23,.10);
+  --shadow-soft-sm: 0 2px 8px rgba(28,25,23,.12);
+  --shadow-soft:    0 4px 16px rgba(28,25,23,.12);
+  --shadow-soft-lg: 0 8px 32px rgba(28,25,23,.14);
+  /* editorial frame — thin rect border + warm shadow */
+  --shadow-frame:   0 1px 2px rgba(28,25,23,.06), 0 4px 12px rgba(28,25,23,.10);
+
+  /* paper texture — very faint warm-grain overlay (via SVG noise) */
+  --texture-dots: radial-gradient(circle, var(--ink-900) 1px, transparent 1.5px);
+  --texture-dots-bg: 14px 14px;
+  --texture-grid:
+    linear-gradient(var(--ink-200) 1px, transparent 1px),
+    linear-gradient(90deg, var(--ink-200) 1px, transparent 1px);
+  --texture-grid-bg: 20px 20px;
+
+  /* amber wash — for illustration surface fills */
+  --wash-amber: var(--amber-200);
+  --wash-slate: var(--slate-200);
+
+  /* motion — gentle, editorial pacing */
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+  --ease-snap:  cubic-bezier(0.34, 1.4, 0.64, 1); /* @kind other */
+  --dur-fast:   100ms; /* @kind other */
+  --dur:        180ms; /* @kind other */
+  --dur-slow:   300ms; /* @kind other */
+
+  /* annotation arrow — uses CSS clip or SVG */
+  --annotation-color: var(--ink-900); /* @kind color */
+
+  /* layout */
+  --container:    1120px;
+  --container-sm: 720px;
+  --container-editorial: 680px;  /* comfortable reading measure */
+}

@@ -1,0 +1,79 @@
+/* ============================================================
+   COLORS — Ink-and-Wash Graphic Journalism palette
+   ------------------------------------------------------------
+   Three families:
+   INK     — warm near-black line work
+   AMBER   — golden wash (buildings, highlights, focal elements)
+   SLATE   — cool blue-gray (ground, shadows, secondary surfaces)
+   PAPER   — warm off-white ground
+   ============================================================ */
+
+:root {
+  /* --- Ink ramp (warm black → transparent) --- */
+  --ink-900: #1C1917;   /* primary ink — lines, text, borders   */
+  --ink-800: #292524;
+  --ink-700: #44403C;
+  --ink-600: #57534E;
+  --ink-500: #78716C;   /* muted text                           */
+  --ink-400: #A8A29E;
+  --ink-300: #D6D3D1;   /* soft dividers                        */
+  --ink-200: #E7E5E4;   /* hairlines                            */
+  --ink-100: #F5F5F4;   /* faint wash                           */
+
+  /* --- Paper — warm parchment (not pure white) --- */
+  --paper:   #FAFAF8;   /* page ground                          */
+  --paper-2: #F4F3EF;   /* slightly warmer panel                */
+  --paper-3: #EDECEA;   /* inset / recessed surface             */
+
+  /* --- Amber wash — buildings, highlights, focal elements --- */
+  --amber-700: #92400E;   /* darkest amber (text on amber bg)   */
+  --amber-600: #D97706;   /* deep amber (line shadows)          */
+  --amber-500: #E8A240;   /* primary wash (buildings, cab)      */
+  --amber-400: #F5C573;   /* lighter wash                       */
+  --amber-300: #FAD99B;   /* pale wash                          */
+  --amber-200: #FDE8C0;   /* near-white amber tint              */
+  --amber-100: #FEF3E2;   /* blush background                   */
+
+  /* --- Slate — street ground, shadows, cool secondary --- */
+  --slate-600: #4B5E72;
+  --slate-500: #6B7FA0;   /* deep shadow / ground               */
+  --slate-400: #8B9EB8;   /* mid shadow                         */
+  --slate-300: #B4C0D0;   /* lighter                            */
+  --slate-200: #D5DCE8;   /* very pale                          */
+  --slate-100: #EBF0F5;   /* faintest tint                      */
+
+  /* --- Data-ink series (amber → slate) --- */
+  --data-1: var(--amber-500);   /* primary series                */
+  --data-2: var(--slate-500);   /* secondary series              */
+  --data-3: var(--amber-300);
+  --data-4: var(--slate-300);
+  --data-5: var(--ink-300);
+  --data-track: var(--ink-200); /* empty bar track               */
+
+  /* --- Semantic aliases --- */
+  --bg:            var(--paper);
+  --bg-muted:      var(--paper-2);
+  --surface:       var(--paper);
+  --surface-warm:  var(--amber-100);
+  --surface-cool:  var(--slate-100);
+  --surface-inverse: var(--ink-900);
+
+  --text-strong:   var(--ink-900);
+  --text-body:     var(--ink-800);
+  --text-muted:    var(--ink-500);
+  --text-faint:    var(--ink-400);
+  --text-inverse:  var(--paper);
+  --text-on-inverse-muted: var(--ink-400);
+
+  --border:        var(--ink-900);
+  --border-soft:   var(--ink-300);
+  --border-faint:  var(--ink-200);
+
+  --accent:        var(--amber-500);
+  --accent-dark:   var(--amber-600);
+  --accent-light:  var(--amber-200);
+  --accent-text:   var(--ink-900);   /* amber is always dark-text  */
+
+  --highlight:     var(--slate-500);
+  --highlight-light: var(--slate-200);
+}

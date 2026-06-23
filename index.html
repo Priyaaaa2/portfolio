@@ -1,0 +1,678 @@
+<!-- @dsCard group="Portfolio" viewport="1280x900" name="Priyanka MK — Portfolio" subtitle="Fully personalised from master profile v3" -->
+<!-- @startingPoint section="Portfolio" subtitle="Priyanka Mysore Krishna — Data Analyst" viewport="1280x900" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Priyanka Mysore Krishna · Data Analyst</title>
+<link rel="stylesheet" href="./styles.css"/>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 48px; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(250,250,248,.96); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--ink-200); height: 64px;
+    display: flex; align-items: center; padding: 0 48px;
+  }
+  .nav-inner { width:100%; max-width:1040px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
+  .logo { display:flex; align-items:center; text-decoration:none; overflow:visible; }
+  .logo-name {
+    font-family:var(--font-hand);
+    font-weight:700;
+    font-size:64px;
+    line-height:1;
+    color:var(--ink-900);
+    letter-spacing:-.04em;
+    transform:translate(-3px, 3px) rotate(-2deg) scale(1.03);
+    display:inline-block;
+    white-space:nowrap;
+  }
+  .nav-links { display:flex; align-items:center; gap:32px; list-style:none; margin:0; padding:0; }
+  .nav-links a { font-family:var(--font-sans); font-size:14px; font-weight:500; color:var(--ink-500); text-decoration:none; }
+  .nav-links a:hover { color:var(--ink-900); }
+  .nav-badge { display:inline-flex; align-items:center; gap:7px; font-family:var(--font-mono); font-size:11px; letter-spacing:.07em; text-transform:uppercase; padding:6px 13px; border:var(--stroke); border-radius:var(--radius-pill); }
+  .badge-dot { width:7px; height:7px; border-radius:50%; background:var(--amber-500); border:1.5px solid var(--amber-600); flex-shrink:0; }
+
+  /* ── HERO ── */
+  .hero { padding: 88px 0 80px; }
+  .hero-grid { display:grid; grid-template-columns:400px 1fr; gap:80px; align-items:center; }
+  .portrait-ring { width:360px; height:360px; border-radius:50%; border:1px solid var(--ink-200); display:flex; align-items:center; justify-content:center; }
+  .portrait { width:334px; height:334px; border-radius:50%; border:var(--stroke); background:var(--paper-3); display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; box-shadow:var(--shadow-soft); }
+  .portrait::before { content:''; position:absolute; inset:0; background-image:var(--texture-dots); background-size:var(--texture-dots-bg); opacity:.18; }
+  .portrait-img { width:100%; height:100%; object-fit:cover; object-position:44% center; position:relative; z-index:1; }
+  .portrait-initial { font-family:var(--font-hand); font-weight:700; font-size:120px; color:var(--ink-300); line-height:1; position:relative; z-index:1; }
+  .hero-eyebrow { font-family:var(--font-mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-500); margin-bottom:16px; }
+  .hero-name { font-family:var(--font-serif); font-weight:700; font-size:50px; letter-spacing:-.03em; line-height:1.0; color:var(--ink-900); margin-bottom:22px; }
+  .hero-bio { font-family:var(--font-serif); font-size:16px; line-height:1.75; color:var(--ink-600); max-width:430px; margin-bottom:20px; }
+  .hero-scholars { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:28px; }
+  .scholar-chip { font-family:var(--font-mono); font-size:10px; letter-spacing:.06em; padding:4px 11px; border:1px solid var(--amber-400); border-radius:var(--radius-pill); background:var(--amber-100); color:var(--amber-700); }
+  .hero-btns { display:flex; gap:12px; }
+  .btn { display:inline-flex; align-items:center; gap:8px; font-family:var(--font-sans); font-weight:600; font-size:14px; padding:11px 22px; border:var(--stroke); border-radius:var(--radius-md); text-decoration:none; transition:box-shadow var(--dur) var(--ease-out), transform var(--dur) var(--ease-out); }
+  .btn-ink { background:var(--ink-900); color:var(--paper); box-shadow:var(--shadow-soft-sm); }
+  .btn-ink:hover { box-shadow:var(--shadow-soft); transform:translateY(-1px); }
+  .btn-outline { background:var(--paper); color:var(--ink-900); box-shadow:var(--shadow-soft-xs); }
+  .btn-outline:hover { box-shadow:var(--shadow-soft-sm); transform:translateY(-1px); }
+
+  /* ── SECTIONS ── */
+  section { padding:72px 0; border-top:1px solid var(--ink-200); }
+  .section-rule { width:40px; height:2.5px; background:var(--amber-500); border-radius:2px; margin-bottom:16px; }
+  .section-title { font-family:var(--font-serif); font-weight:700; font-size:28px; color:var(--ink-900); letter-spacing:-.02em; margin-bottom:44px; }
+
+  /* ── WHAT I DO ── */
+  .services { display:grid; grid-template-columns:1fr 1fr; gap:36px 56px; }
+  .svc { display:grid; grid-template-columns:42px 1fr; gap:0 14px; }
+  .svc-icon { color:var(--amber-600); display:flex; align-items:center; justify-content:center; margin-top:3px; }
+  .svc-icon svg { width:26px; height:26px; stroke-width:1.5; }
+  .svc-title { font-family:var(--font-sans); font-weight:700; font-size:15px; color:var(--ink-900); margin-bottom:8px; }
+  .svc-body { font-family:var(--font-serif); font-size:14px; line-height:1.7; color:var(--ink-500); }
+
+  /* ── PROJECTS ── */
+  .flagship { border:var(--stroke); border-radius:var(--radius-xl); overflow:hidden; background:var(--paper); box-shadow:var(--shadow-frame); margin-bottom:24px; }
+  .flagship-header { background:var(--amber-100); padding:36px 44px 28px; display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:end; border-bottom:1px solid var(--amber-300); }
+  .flagship-stat { font-family:var(--font-mono); font-weight:700; font-size:60px; color:var(--ink-900); line-height:1; }
+  .flagship-stat-lbl { font-family:var(--font-serif); font-style:italic; font-size:13px; color:var(--ink-500); margin-top:6px; }
+  .flagship-annotation { font-family:var(--font-hand); font-weight:700; font-size:20px; color:var(--ink-700); line-height:1.35; }
+  .flagship-substat { font-family:var(--font-mono); font-size:13px; color:var(--amber-700); margin-top:10px; font-weight:700; }
+  .flagship-body { padding:30px 44px; display:grid; grid-template-columns:1fr auto; gap:24px; align-items:start; }
+  .project-title { font-family:var(--font-serif); font-weight:700; font-size:19px; color:var(--ink-900); margin-bottom:10px; }
+  .project-desc { font-family:var(--font-serif); font-size:15px; line-height:1.72; color:var(--ink-500); margin-bottom:16px; font-style:italic; }
+  .tag-row { display:flex; gap:7px; flex-wrap:wrap; }
+  .tag { font-family:var(--font-mono); font-size:10px; letter-spacing:.05em; padding:3px 10px; border:1px solid var(--ink-200); border-radius:var(--radius-pill); color:var(--ink-500); }
+
+  .project-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  .pcard { border:var(--stroke); border-radius:var(--radius-xl); overflow:hidden; background:var(--paper); box-shadow:var(--shadow-frame); transition:transform var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease-out); cursor:pointer; }
+  .pcard:hover { transform:translateY(-3px); box-shadow:var(--shadow-soft-lg); }
+  .pcard-header { padding:24px 28px 16px; border-bottom:1px solid var(--ink-200); min-height:114px; position:relative; }
+  .pcard-body { padding:20px 28px 24px; }
+  .pcard-stat { font-family:var(--font-mono); font-weight:700; font-size:36px; color:var(--ink-900); line-height:1; }
+  .pcard-stat-lbl { font-family:var(--font-serif); font-style:italic; font-size:12px; color:var(--ink-500); margin-top:4px; }
+  .pcard-note { position:absolute; top:16px; right:16px; font-family:var(--font-hand); font-weight:700; font-size:14px; line-height:1.3; text-align:right; }
+  .spark { display:flex; align-items:flex-end; gap:3px; height:34px; margin-bottom:10px; }
+  .sb { flex:1; border-radius:2px 2px 0 0; border:1px solid rgba(28,25,23,.08); }
+
+  /* ── MORE PROJECTS ── */
+  .more-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:28px; }
+  .mcard { border:var(--stroke); border-radius:var(--radius-lg); overflow:hidden; background:var(--paper); box-shadow:var(--shadow-soft-xs); transition:transform var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease-out); cursor:pointer; }
+  .mcard:hover { transform:translateY(-2px); box-shadow:var(--shadow-soft-sm); }
+  .mcard-header { padding:18px 20px 12px; border-bottom:1px solid var(--ink-200); }
+  .mcard-body { padding:14px 20px 18px; }
+  .mcard-stat { font-family:var(--font-mono); font-weight:700; font-size:26px; color:var(--ink-900); line-height:1; }
+  .mcard-lbl { font-family:var(--font-serif); font-style:italic; font-size:11px; color:var(--ink-500); margin-top:3px; }
+  .mcard-badge { font-family:var(--font-mono); font-size:9px; letter-spacing:.06em; text-transform:uppercase; padding:2px 8px; border:1px solid var(--amber-400); border-radius:var(--radius-pill); background:var(--amber-100); color:var(--amber-700); display:inline-block; }
+  .mcard-title { font-family:var(--font-serif); font-weight:700; font-size:14px; color:var(--ink-900); margin-bottom:5px; }
+  .mcard-desc { font-family:var(--font-serif); font-size:13px; line-height:1.62; color:var(--ink-500); margin-bottom:10px; font-style:italic; }
+  .view-more-wrap { text-align:center; margin-top:36px; }
+  #more-projects { overflow:hidden; max-height:0; opacity:0; transition:max-height .5s cubic-bezier(0.16,1,0.3,1), opacity .3s ease; }
+  @media (max-width:860px) { .more-grid { grid-template-columns:1fr 1fr; } }
+
+  /* ── EXPERIENCE ── */
+  .exp-item { display:grid; grid-template-columns:200px 1fr; gap:32px; padding:28px 0; border-bottom:1px solid var(--ink-200); }
+  .exp-item:last-child { border-bottom:none; padding-bottom:0; }
+  .exp-org { font-family:var(--font-sans); font-weight:600; font-size:13px; color:var(--ink-700); margin-bottom:4px; }
+  .exp-period { font-family:var(--font-mono); font-size:11px; letter-spacing:.05em; color:var(--ink-400); }
+  .exp-location { font-family:var(--font-mono); font-size:11px; color:var(--ink-400); margin-top:3px; }
+  .exp-pill { display:inline-flex; align-items:center; gap:5px; font-family:var(--font-mono); font-size:10px; letter-spacing:.06em; text-transform:uppercase; padding:4px 10px; border:1px solid var(--amber-400); border-radius:var(--radius-pill); background:var(--amber-100); color:var(--amber-700); margin-top:10px; }
+  .exp-role { font-family:var(--font-serif); font-weight:700; font-size:18px; color:var(--ink-900); margin-bottom:12px; }
+  .exp-list-items { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  .exp-list-items li { font-family:var(--font-serif); font-size:14px; line-height:1.68; color:var(--ink-600); padding-left:16px; position:relative; }
+  .exp-list-items li::before { content:'—'; position:absolute; left:0; color:var(--amber-500); font-weight:700; }
+
+  /* ── EDUCATION ── */
+  .edu-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  .edu-card { border:var(--stroke); border-radius:var(--radius-xl); padding:28px; box-shadow:var(--shadow-frame); }
+  .edu-degree { font-family:var(--font-serif); font-weight:700; font-size:17px; color:var(--ink-900); margin-bottom:6px; }
+  .edu-school { font-family:var(--font-sans); font-size:14px; color:var(--ink-600); margin-bottom:4px; }
+  .edu-period { font-family:var(--font-mono); font-size:11px; color:var(--ink-400); margin-bottom:14px; }
+  .edu-chips { display:flex; gap:7px; flex-wrap:wrap; }
+  .edu-chip { font-family:var(--font-mono); font-size:10px; letter-spacing:.04em; padding:3px 9px; border:1px solid var(--ink-200); border-radius:var(--radius-pill); color:var(--ink-500); }
+  .edu-chip.amber { border-color:var(--amber-400); background:var(--amber-100); color:var(--amber-700); }
+  .edu-chip.gold { border-color:var(--amber-500); background:var(--amber-500); color:var(--ink-900); font-weight:700; }
+
+  /* ── SKILLS ── */
+  .skills-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; }
+  .skill-group-title { font-family:var(--font-sans); font-weight:700; font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-600); margin-bottom:14px; }
+  .chips { display:flex; gap:7px; flex-wrap:wrap; }
+  .chip { font-family:var(--font-mono); font-size:11px; letter-spacing:.03em; padding:5px 12px; border:var(--stroke); border-radius:var(--radius-pill); color:var(--ink-700); }
+  .chip.hi { background:var(--ink-900); color:var(--paper); border-color:var(--ink-900); }
+
+  /* ── AWARDS ── */
+  .awards-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .award { border:var(--stroke); border-radius:var(--radius-lg); padding:20px; box-shadow:var(--shadow-soft-xs); }
+  .award-prize { font-family:var(--font-serif); font-weight:700; font-size:15px; color:var(--ink-900); margin-bottom:4px; }
+  .award-event { font-family:var(--font-serif); font-size:13px; color:var(--ink-500); font-style:italic; margin-bottom:8px; line-height:1.4; }
+  .award-year { font-family:var(--font-mono); font-size:10px; color:var(--ink-400); letter-spacing:.06em; }
+  .award.featured { background:var(--amber-100); border-color:var(--amber-400); }
+  .award.featured .award-prize { color:var(--amber-700); }
+
+  /* ── CONTACT ── */
+  .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+  .contact-title { font-family:var(--font-serif); font-weight:700; font-size:38px; letter-spacing:-.03em; color:var(--ink-900); margin-bottom:16px; line-height:1.1; }
+  .contact-body { font-family:var(--font-serif); font-size:16px; line-height:1.72; color:var(--ink-500); margin-bottom:28px; }
+  .contact-links { display:flex; gap:24px; flex-wrap:wrap; margin-bottom:24px; }
+  .clink { font-family:var(--font-sans); font-weight:600; font-size:14px; color:var(--ink-900); text-decoration:none; border-bottom:1.5px solid var(--ink-900); padding-bottom:2px; transition:color var(--dur), border-color var(--dur); }
+  .clink:hover { color:var(--amber-600); border-color:var(--amber-500); }
+  .contact-panel { background:var(--ink-900); border:var(--stroke); border-radius:var(--radius-xl); padding:36px; }
+  .contact-panel-num { font-family:var(--font-mono); font-weight:700; font-size:48px; color:var(--paper); line-height:1; }
+  .contact-panel-lbl { font-family:var(--font-serif); font-style:italic; font-size:14px; color:var(--ink-400); margin-top:6px; }
+  .contact-panel-note { font-family:var(--font-hand); font-weight:700; font-size:18px; color:var(--amber-300); margin-top:20px; line-height:1.35; }
+
+  /* ── FOOTER ── */
+  footer { border-top:1px solid var(--ink-200); padding:24px 0; }
+  .footer-inner { display:flex; align-items:center; justify-content:space-between; }
+  .footer-copy { font-family:var(--font-mono); font-size:11px; color:var(--ink-400); letter-spacing:.04em; }
+
+  @media (max-width:860px) {
+    .hero-grid,.services,.project-grid,.edu-grid,.skills-grid,.awards-grid,.contact-grid,.exp-item,.flagship-header,.flagship-body { grid-template-columns:1fr; }
+    .hero-name { font-size:38px; }
+    .portrait-ring,.portrait { width:240px; height:240px; }
+    .contact-panel { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-name" aria-label="Priyanka">Priyanka</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <span class="nav-badge"><span class="badge-dot"></span>Summer 2026 placement</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="border-top:none; padding-top:88px;">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div style="display:flex; justify-content:center;">
+        <div class="portrait-ring">
+          <div class="portrait">
+            <img class="portrait-img" src="./assets/hero.jpg" alt="Priyanka portrait">
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="hero-eyebrow">Data Analyst · Bath, UK</p>
+        <h1 class="hero-name">Priyanka<br>Mysore Krishna</h1>
+        <p class="hero-bio">MSc Data Science student at the University of Bath — I specialise in product analytics, statistical modelling, and building self-serve tools that let teams answer their own questions. I write findings clearly enough for a C-suite audience.</p>
+        <div class="hero-scholars">
+          <span class="scholar-chip">Merit Scholarship — Bath 2025</span>
+          <span class="scholar-chip">Global Leaders Scholarship — Bath 2025</span>
+        </div>
+        <div class="hero-btns">
+          <a href="mailto:pmk46@bath.ac.uk" class="btn btn-ink">pmk46@bath.ac.uk</a>
+          <a href="https://linkedin.com/in/priyanka-m-krishna" target="_blank" class="btn btn-outline">LinkedIn ↗</a>
+          <a href="https://github.com/Priyaaaa2" target="_blank" class="btn btn-outline">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT I DO -->
+<section>
+  <div class="wrap">
+    <div class="section-rule"></div>
+    <h2 class="section-title">What I Do</h2>
+    <div class="services">
+      <div class="svc">
+        <div class="svc-icon"><i data-lucide="flask-conical"></i></div>
+        <div>
+          <p class="svc-title">Product Analytics & Experimentation</p>
+          <p class="svc-body">End-to-end A/B testing (frequentist Z-test, Chi-square, and Bayesian). Funnel drop-off, retention cohorts (30/60/90-day), RFM segmentation, LTV/CAC. I care about whether an intervention worked, not just whether a coefficient is significant.</p>
+        </div>
+      </div>
+      <div class="svc">
+        <div class="svc-icon"><i data-lucide="database"></i></div>
+        <div>
+          <p class="svc-title">Analytics Engineering</p>
+          <p class="svc-body">Production SQL modelled with dbt (staging and mart layers), Streamlit and Power BI dashboards built for stakeholder self-service. I build the infrastructure that removes the analyst from the critical path.</p>
+        </div>
+      </div>
+      <div class="svc">
+        <div class="svc-icon"><i data-lucide="chart-line"></i></div>
+        <div>
+          <p class="svc-title">Statistical & Bayesian Modelling</p>
+          <p class="svc-body">Hypothesis testing, regression, Bayesian hierarchical models (NumPyro/NUTS), time series (SARIMA, Prophet, LSTM). MSc modules in Applied Data Science, Statistical & Bayesian Data Science.</p>
+        </div>
+      </div>
+      <div class="svc">
+        <div class="svc-icon"><i data-lucide="presentation"></i></div>
+        <div>
+          <p class="svc-title">Executive Communication</p>
+          <p class="svc-body">Gap analysis, key driver analysis, structured recommendations. I translate model outputs into one-page executive summaries and video presentations for non-technical stakeholders at C-level.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="work">
+  <div class="wrap">
+    <div class="section-rule"></div>
+    <h2 class="section-title">Selected Work</h2>
+
+    <!-- Flagship: NYC Paper -->
+    <div class="flagship">
+      <div class="flagship-header">
+        <div>
+          <div class="flagship-stat">509M</div>
+          <div class="flagship-stat-lbl">taxi + ride-hail trips · 93M subway records · 263 TLC zones</div>
+          <div class="flagship-substat">↳ 25-page paper published on Zenodo · full code on GitHub</div>
+        </div>
+        <div>
+          <div class="flagship-annotation">transit access, not income,<br>drives the 58-point gap ↘</div>
+          <div style="display:flex; align-items:flex-end; gap:5px; height:44px; margin-top:16px;">
+            <div style="flex:1; height:100%; background:var(--amber-500); border:1px solid rgba(0,0,0,.08); border-radius:2px 2px 0 0;"></div>
+            <div style="flex:1; height:42%; background:var(--slate-400); border:1px solid rgba(0,0,0,.08); border-radius:2px 2px 0 0;"></div>
+            <div style="flex:1; height:28%; background:var(--slate-300); border:1px solid rgba(0,0,0,.08); border-radius:2px 2px 0 0;"></div>
+          </div>
+          <div style="font-family:var(--font-mono); font-size:11px; color:var(--ink-500); margin-top:6px; line-height:1.6;">
+            ride-hail <span style="color:var(--amber-600); font-weight:700;">−7%</span> &nbsp;·&nbsp; yellow cab <span style="color:var(--slate-600); font-weight:700;">+9.5%</span>
+          </div>
+        </div>
+      </div>
+      <div class="flagship-body">
+        <div>
+          <h3 class="project-title">NYC Congestion Pricing — Equity & Mode Shift</h3>
+          <p class="project-desc">Pulled 509M taxi trips, 93M subway records, and Census income data to study who gets hurt by NYC's congestion toll. Ride-hail fell 7%. Yellow cabs rose 9.5%. Traced the 58-point demand gap to transit access, not income. Modelled platform substitution (2.65×) and projected a $130M revenue swing from a proposed 2027 toll increase. Argued transit investment protects low-income riders better than fare exemptions. Published in full on Zenodo.</p>
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">Causal Inference</span><span class="tag">DiD</span><span class="tag">Scenario Forecasting</span><span class="tag">Zenodo</span>
+          </div>
+        </div>
+        <div style="flex-shrink:0; display:flex; flex-direction:column; gap:8px;">
+          <a href="https://github.com/Priyaaaa2" target="_blank" class="btn btn-outline" style="white-space:nowrap; font-size:13px;">GitHub ↗</a>
+          <a href="https://zenodo.org" target="_blank" class="btn btn-outline" style="white-space:nowrap; font-size:13px;">Paper ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 best -->
+    <div class="project-grid">
+      <article class="pcard">
+        <div class="pcard-header" style="background:var(--amber-100);">
+          <div class="spark">
+            <div class="sb" style="height:40%;background:var(--slate-200)"></div>
+            <div class="sb" style="height:60%;background:var(--slate-300)"></div>
+            <div class="sb" style="height:76%;background:var(--amber-300)"></div>
+            <div class="sb" style="height:90%;background:var(--amber-400)"></div>
+            <div class="sb" style="height:100%;background:var(--amber-500)"></div>
+            <div class="sb" style="height:84%;background:var(--amber-400)"></div>
+            <div class="sb" style="height:66%;background:var(--amber-300)"></div>
+          </div>
+          <div class="pcard-stat">+31.6%</div>
+          <div class="pcard-stat-lbl">conversion uplift · £595,876 projected annually · p &lt; 0.0001</div>
+          <p class="pcard-note" style="color:var(--amber-700);">frequentist &amp;<br>Bayesian agreed</p>
+        </div>
+        <div class="pcard-body">
+          <h3 class="project-title">Product Analytics & A/B Experimentation</h3>
+          <p class="project-desc">Built retention, funnel, RFM, and LTV/CAC analyses on 31,524 events using dbt. Ran A/B tests — both frequentist and Bayesian found the same +31.6% uplift. Built a 6-page Streamlit dashboard so stakeholders stopped asking the analyst.</p>
+          <div class="tag-row"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">dbt</span><span class="tag">A/B Testing</span><span class="tag">Streamlit</span></div>
+        </div>
+      </article>
+
+      <article class="pcard">
+        <div class="pcard-header" style="background:var(--slate-100);">
+          <div class="spark">
+            <div class="sb" style="height:50%;background:var(--slate-200)"></div>
+            <div class="sb" style="height:65%;background:var(--slate-300)"></div>
+            <div class="sb" style="height:80%;background:var(--slate-400)"></div>
+            <div class="sb" style="height:100%;background:var(--amber-500)"></div>
+            <div class="sb" style="height:88%;background:var(--amber-400)"></div>
+            <div class="sb" style="height:72%;background:var(--amber-300)"></div>
+            <div class="sb" style="height:55%;background:var(--amber-200)"></div>
+          </div>
+          <div class="pcard-stat">14.9%</div>
+          <div class="pcard-stat-lbl">MAPE · best of 6 models · 18–30% projected stockout reduction</div>
+          <p class="pcard-note" style="color:var(--slate-600);">deployed as<br>live API</p>
+        </div>
+        <div class="pcard-body">
+          <h3 class="project-title">Demand Forecasting & Inventory Optimisation</h3>
+          <p class="project-desc">Benchmarked 6 models on 36,500 rows of retail data. Moving Average 7d won at MAPE 14.9%. Built an inventory optimiser (EOQ, safety stock, reorder points) and deployed it as a live Docker API with 4 endpoints.</p>
+          <div class="tag-row"><span class="tag">Python</span><span class="tag">SARIMA</span><span class="tag">Prophet</span><span class="tag">LSTM</span><span class="tag">FastAPI</span><span class="tag">Docker</span></div>
+        </div>
+      </article>
+    </div>
+
+    <!-- View more toggle -->
+    <div class="view-more-wrap">
+      <button id="view-more-btn" onclick="toggleMore()" class="btn btn-outline" style="cursor:pointer; border:none; background:var(--paper); padding:12px 28px;">
+        <span id="vm-label">View more projects</span>&nbsp;<span id="vm-arrow" style="display:inline-block; transition:transform .3s;">↓</span>
+      </button>
+    </div>
+
+    <!-- More projects (hidden) -->
+    <div id="more-projects">
+      <div class="more-grid">
+
+        <article class="mcard">
+          <div class="mcard-header" style="background:var(--paper-3);">
+            <div class="mcard-stat">r = 0.036</div>
+            <div class="mcard-lbl">income vs ready-meal · p = 0.263 · not significant</div>
+          </div>
+          <div class="mcard-body">
+            <p class="mcard-title">Tesco Grocery London</p>
+            <p class="mcard-desc">Merged 1.6M Clubcard records with ONS income data. Found ready-meal consumption has no link to income. Delivered as a video + infographic to a C-level audience.</p>
+            <div class="tag-row"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Bath coursework</span></div>
+          </div>
+        </article>
+
+        <article class="mcard">
+          <div class="mcard-header" style="background:var(--amber-100);">
+            <div class="mcard-stat">r = 0.94</div>
+            <div class="mcard-lbl">"Skills for the Future" drives satisfaction strongest</div>
+          </div>
+          <div class="mcard-body">
+            <p class="mcard-title">NSS 2025 Feasibility Analysis</p>
+            <p class="mcard-desc">Recommended revamping Business Studies to a university executive board. Found a −2.5% teaching quality gap and built a composite satisfaction index (r = 0.93 with official metric).</p>
+            <div class="tag-row"><span class="tag">Python</span><span class="tag">Gap Analysis</span><span class="tag">Bath coursework</span></div>
+          </div>
+        </article>
+
+        <article class="mcard">
+          <div class="mcard-header" style="background:var(--slate-100);">
+            <div class="mcard-stat">−75%</div>
+            <div class="mcard-lbl">unexplained component variation · 16 of 30 flagged high-risk</div>
+          </div>
+          <div class="mcard-body">
+            <p class="mcard-title">Bayesian Degradation Modelling</p>
+            <p class="mcard-desc">Built a hierarchical Bayesian model (NumPyro/NUTS) to predict mechanical failures. Cut unexplained variation by 75%. Correctly flagged high-risk components in a blind test.</p>
+            <div class="tag-row"><span class="tag">NumPyro</span><span class="tag">Bayesian</span><span class="tag">Bath coursework</span></div>
+          </div>
+        </article>
+
+        <article class="mcard">
+          <div class="mcard-header" style="background:var(--paper-3);">
+            <div class="mcard-stat">r = 0.59</div>
+            <div class="mcard-lbl">BMI → disease progression · LDA accuracy 73%</div>
+          </div>
+          <div class="mcard-body">
+            <p class="mcard-title">Diabetes Statistical Analysis</p>
+            <p class="mcard-desc">Found BMI predicts disease progression strongest (p &lt; 10⁻⁴¹). Built a sex classifier at 73% test accuracy using linear discriminant analysis. Delivered as a 10-page structured report.</p>
+            <div class="tag-row"><span class="tag">Python</span><span class="tag">SciPy</span><span class="tag">scikit-learn</span></div>
+          </div>
+        </article>
+
+        <article class="mcard">
+          <div class="mcard-header" style="background:var(--amber-100);">
+            <span class="mcard-badge">1st Prize · INFOTHON 2023</span>
+            <div class="mcard-stat" style="margin-top:8px;">20+</div>
+            <div class="mcard-lbl">videos generated in under 20 seconds from text</div>
+          </div>
+          <div class="mcard-body">
+            <p class="mcard-title">Click2Flick — AI Video Generator</p>
+            <p class="mcard-desc">Won 1st Prize at a national 12-hour hackathon. Converts a text description into an educational video automatically using NLP + D-ID + FFmpeg.</p>
+            <div class="tag-row"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">React</span><span class="tag">D-ID</span></div>
+          </div>
+        </article>
+
+        <article class="mcard">
+          <div class="mcard-header" style="background:var(--slate-100);">
+            <span class="mcard-badge">Grand Finale Finalist · 300+ teams</span>
+            <div class="mcard-stat" style="margin-top:8px;">100%</div>
+            <div class="mcard-lbl">functional correctness across 3 migrated codebases</div>
+          </div>
+          <div class="mcard-body">
+            <p class="mcard-title">Code Revive — Legacy Migration Tool</p>
+            <p class="mcard-desc">Shortlisted from 300+ teams at EG AI Hackathon 2024. Converts COBOL codebases to Python, Java, or C++ using LLaMA 3 — 100% correctness on all 3 test codebases.</p>
+            <div class="tag-row"><span class="tag">LLaMA 3</span><span class="tag">Python</span><span class="tag">Streamlit</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="section-rule"></div>
+    <h2 class="section-title">Experience</h2>
+
+    <div class="exp-item">
+      <div>
+        <div class="exp-org">Google Cloud & AICTE EduSkills</div>
+        <div class="exp-period">Apr – Jun 2025</div>
+        <div class="exp-location">Remote</div>
+        <span class="exp-pill">Grade O · Outstanding</span>
+      </div>
+      <div>
+        <div class="exp-role">Generative AI Virtual Intern</div>
+        <ul class="exp-list-items">
+          <li>Built an LLM-powered job portal with CV parsing, keyword extraction, and location-based filtering using Gemini API and Firebase — 12 peers secured interviews, 50+ students reached new opportunities.</li>
+          <li>Reduced users' job-search effort to under 2 minutes per search via an automated keyword matching pipeline.</li>
+          <li>Completed 24 Google Skill Boost certifications (LLMs, MLOps, Prompt Engineering, Responsible AI, BigQuery, Vertex AI) — awarded Grade O (90–100%).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div>
+        <div class="exp-org">Tesco Stores Ltd</div>
+        <div class="exp-period">Nov 2025 – Apr 2026</div>
+        <div class="exp-location">Paulton, Bristol, UK</div>
+      </div>
+      <div>
+        <div class="exp-role">Tesco Colleague</div>
+        <ul class="exp-list-items">
+          <li>Online order fulfilment, inventory management, and customer service — sustained alongside a full-time MSc programme, demonstrating time management and reliability under pressure.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div>
+        <div class="exp-org">University of Bath</div>
+        <div class="exp-period">Oct 2025 – Present</div>
+        <div class="exp-location">Bath, UK</div>
+      </div>
+      <div>
+        <div class="exp-role">Student Representative <span style="font-weight:400; font-size:14px; color:var(--ink-500);">(3 concurrent elected roles)</span></div>
+        <ul class="exp-list-items">
+          <li><strong>Data Science Academic Rep:</strong> presents structured feedback from 30+ MSc students to faculty at PGT committee; directly influenced module delivery for the 2025/26 cohort.</li>
+          <li><strong>Student Senate Rep:</strong> one of a small number of postgraduate students on SU Senate; proposed a postgraduate hackathon and skills workshop series.</li>
+          <li><strong>CS Department Rep:</strong> bridges communication between CS postgraduates and department leadership; co-organised Focus Week events for 40+ students.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrap">
+    <div class="section-rule"></div>
+    <h2 class="section-title">Education</h2>
+    <div class="edu-grid">
+      <div class="edu-card" style="background:var(--amber-100); border-color:var(--amber-300);">
+        <div class="edu-degree">MSc Data Science with Placement</div>
+        <div class="edu-school">University of Bath, UK</div>
+        <div class="edu-period">Sep 2025 – Sep 2027 (expected)</div>
+        <div class="edu-chips">
+          <span class="edu-chip gold">Merit Scholarship</span>
+          <span class="edu-chip amber">Global Leaders Scholarship</span>
+          <span class="edu-chip">Applied Data Science</span>
+          <span class="edu-chip">Bayesian Data Science</span>
+          <span class="edu-chip">Machine & Deep Learning</span>
+          <span class="edu-chip">Spatio-Temporal Analytics</span>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-degree">BEng Computer Science & Engineering</div>
+        <div class="edu-school">P.E.S. College of Engineering, Mandya, India</div>
+        <div class="edu-period">Dec 2021 – May 2025</div>
+        <div class="edu-chips">
+          <span class="edu-chip amber">8.81 / 10 — First Class with Distinction</span>
+          <span class="edu-chip">AI & Machine Learning</span>
+          <span class="edu-chip">Data Analytics</span>
+          <span class="edu-chip">DBMS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="section-rule"></div>
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div>
+        <div class="skill-group-title">Analysis & Statistics</div>
+        <div class="chips">
+          <span class="chip hi">SQL</span>
+          <span class="chip hi">Python</span>
+          <span class="chip">R</span>
+          <span class="chip">Pandas</span>
+          <span class="chip">NumPy</span>
+          <span class="chip">SciPy</span>
+          <span class="chip">A/B Testing</span>
+          <span class="chip">Bayesian Inference</span>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-title">Engineering & Deployment</div>
+        <div class="chips">
+          <span class="chip hi">dbt</span>
+          <span class="chip">FastAPI</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Streamlit</span>
+          <span class="chip">Airflow</span>
+          <span class="chip">BigQuery</span>
+          <span class="chip">AWS (S3, Lambda)</span>
+          <span class="chip">Firebase</span>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group-title">ML & AI</div>
+        <div class="chips">
+          <span class="chip hi">scikit-learn</span>
+          <span class="chip">TensorFlow</span>
+          <span class="chip">PyTorch</span>
+          <span class="chip">SARIMA</span>
+          <span class="chip">Prophet</span>
+          <span class="chip">NumPyro</span>
+          <span class="chip">Gemini API</span>
+          <span class="chip">Vertex AI</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section>
+  <div class="wrap">
+    <div class="section-rule"></div>
+    <h2 class="section-title">Awards & Recognition</h2>
+    <div class="awards-grid">
+      <div class="award featured">
+        <div class="award-prize">1st Prize — AI/ML Category</div>
+        <div class="award-event">INFOTHON 2023, National Level 12-hour Hackathon, VVCE</div>
+        <div class="award-year">Jul 2023</div>
+      </div>
+      <div class="award featured">
+        <div class="award-prize">Grand Finale Finalist</div>
+        <div class="award-event">EG AI Innovation Hackathon 2024 — shortlisted from 300+ teams (Team PANDAS)</div>
+        <div class="award-year">2024</div>
+      </div>
+      <div class="award featured">
+        <div class="award-prize">Grade O Outstanding</div>
+        <div class="award-event">Google Cloud & AICTE Generative AI Internship (90–100%)</div>
+        <div class="award-year">Jun 2025</div>
+      </div>
+      <div class="award">
+        <div class="award-prize">3rd Prize</div>
+        <div class="award-event">National Level Software Hackathon, ACU-BGSIT</div>
+        <div class="award-year">Aug 2023</div>
+      </div>
+      <div class="award">
+        <div class="award-prize">2nd Runner Up</div>
+        <div class="award-event">TensorFlow Competition — Google AI Campus Fest</div>
+        <div class="award-year">Nov 2023</div>
+      </div>
+      <div class="award">
+        <div class="award-prize">Merit + Global Leaders Scholarships</div>
+        <div class="award-event">University of Bath — awarded on entry to MSc</div>
+        <div class="award-year">2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="section-rule"></div>
+    <div class="contact-grid">
+      <div>
+        <h2 class="contact-title">Let's talk</h2>
+        <p class="contact-body">I'm available for a Summer 2026 placement (ongoing MSc) and open to data analyst, product analyst, and BI analyst roles in the UK. If you have a hard question and a dataset, reach out.</p>
+        <div class="contact-links">
+          <a href="mailto:pmk46@bath.ac.uk" class="clink">pmk46@bath.ac.uk ↗</a>
+          <a href="https://linkedin.com/in/priyanka-m-krishna" target="_blank" class="clink">LinkedIn ↗</a>
+          <a href="https://github.com/Priyaaaa2" target="_blank" class="clink">GitHub ↗</a>
+        </div>
+        <span class="nav-badge" style="display:inline-flex;"><span class="badge-dot"></span>Summer 2026 placement</span>
+      </div>
+      <div class="contact-panel">
+        <div class="contact-panel-num">31,524</div>
+        <div class="contact-panel-lbl">events in my largest product analytics dataset — so far</div>
+        <div class="contact-panel-note">looking for the next<br>interesting problem ✷</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Priyanka Mysore Krishna · Bath, UK</span>
+      <span style="font-family:var(--font-serif); font-style:italic; font-size:13px; color:var(--ink-400);">MSc Data Science · University of Bath</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  if (typeof lucide !== 'undefined') lucide.createIcons();
+
+  function toggleMore() {
+    const panel = document.getElementById('more-projects');
+    const label = document.getElementById('vm-label');
+    const arrow = document.getElementById('vm-arrow');
+    const open = panel.style.maxHeight && panel.style.maxHeight !== '0px';
+    if (open) {
+      panel.style.maxHeight = '0';
+      panel.style.opacity = '0';
+      label.textContent = 'View more projects';
+      arrow.style.transform = 'rotate(0deg)';
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+      panel.style.opacity = '1';
+      label.textContent = 'Show less';
+      arrow.style.transform = 'rotate(180deg)';
+    }
+  }
+</script>
+</body>
+</html>
