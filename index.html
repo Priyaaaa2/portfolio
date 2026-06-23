@@ -177,6 +177,62 @@
     .portrait-ring,.portrait { width:240px; height:240px; }
     .contact-panel { display:none; }
   }
+
+  @media (max-width:640px) {
+    .wrap { padding: 0 18px; }
+    nav { height:auto; min-height:64px; padding:12px 18px; }
+    .nav-inner {
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:flex-start;
+      justify-content:flex-start;
+    }
+    .logo { flex:1 1 auto; min-width:0; }
+    .logo-name {
+      font-size:40px;
+      transform:translate(-1px, 1px) rotate(-2deg) scale(1);
+      white-space:normal;
+      line-height:.9;
+      max-width:100%;
+    }
+    .nav-links {
+      order:3;
+      width:100%;
+      gap:14px;
+      flex-wrap:wrap;
+      padding-top:4px;
+    }
+    .nav-links a { font-size:13px; }
+    .nav-badge { order:2; font-size:9px; padding:5px 10px; margin-left:auto; }
+    .hero { padding: 56px 0 56px; }
+    .hero-grid { gap:28px; }
+    .hero-eyebrow { margin-bottom:12px; }
+    .hero-name { font-size:32px; margin-bottom:16px; }
+    .hero-bio { font-size:15px; line-height:1.65; margin-bottom:18px; }
+    .hero-btns { flex-direction:column; align-items:stretch; }
+    .btn { justify-content:center; width:100%; }
+    section { padding:52px 0; }
+    .section-title { font-size:24px; margin-bottom:28px; }
+    .services,.project-grid,.edu-grid,.skills-grid,.awards-grid,.contact-grid,.more-grid { grid-template-columns:1fr; }
+    .flagship-header,.flagship-body { padding:22px 18px; }
+    .flagship-stat { font-size:44px; }
+    .flagship-annotation { font-size:17px; }
+    .flagship-body { gap:18px; }
+    .pcard-header,.pcard-body,.mcard-header,.mcard-body,.edu-card,.award { padding-left:18px; padding-right:18px; }
+    .pcard-header { min-height:0; }
+    .pcard-stat { font-size:30px; }
+    .mcard-stat { font-size:24px; }
+    .exp-item { gap:12px; padding:22px 0; }
+    .exp-role { font-size:16px; margin-bottom:10px; }
+    .exp-list-items li { font-size:13px; line-height:1.62; }
+    .contact-grid { gap:28px; }
+    .contact-title { font-size:30px; }
+    .contact-body { font-size:15px; margin-bottom:20px; }
+    .contact-links { gap:14px; margin-bottom:18px; }
+    .footer-inner { flex-direction:column; align-items:flex-start; gap:8px; }
+    .footer-copy { font-size:10px; }
+    .more-grid { gap:14px; }
+  }
 </style>
 </head>
 <body>
